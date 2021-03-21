@@ -17,13 +17,56 @@ section.step2-select-package.step-active h3 + p, section.step3-review.step-activ
   display: none;
 }
 
+section.step2-select-package.step-active ul:hover, section.step2-select-package.step-complete ul.package-selected {
+  cursor: pointer;
+  position: relative;
+  border-color: orange;
+  background: #f8f8f8;
+}
+
+section.step2-select-package.step-active ul:hover h3 span, section.step2-select-package.step-complete ul.package-selected h3 span,
+section.step2-select-package.step-active ul:hover .superhero-placeholder,
+section.step2-select-package.step-complete ul.package-selected .superhero-placeholder {
+  color: orange;
+}
+
+section.intro {
+  position: relative;
+  background: #0d0d1f;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  section.intro {
+    height: 400px;
+  }
+  section.intro:before, section.intro:after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background: #0d0d1f;
+  }
+  section.intro:after {
+    left: 100%;
+  }
+}
+
 section.intro p {
   margin: 15px 25px;
 }
 
+@media (min-width: 1200px) {
+  section.intro p {
+    margin: 15px 25px 15px 0;
+  }
+}
+
 section.step1-select-hero {
   position: relative;
-  background: #eee;
+  background: #f8f8f8;
 }
 
 @media (min-width: 1200px) {
@@ -37,7 +80,7 @@ section.step1-select-hero {
     top: 0;
     width: 100%;
     height: 500px;
-    background: #eee;
+    background: #f8f8f8;
   }
   section.step1-select-hero:after {
     left: 100%;
@@ -51,6 +94,8 @@ section.step1-select-hero .superhero-selected-container {
 section.step1-select-hero .superhero-selected-container .img-container {
   width: 270px;
   margin: 0 auto;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background: white;
   padding: 10px 10px 50px 10px;
   margin-top: 25px;
@@ -70,7 +115,7 @@ section.step1-select-hero .superhero-selected-container .img-container:after {
   font-family: "Ranchers", sans-serif;
   font-weight: 700;
   font-size: 25px;
-  color: darkblue;
+  color: #0d0d1f;
   position: absolute;
   right: -45px;
   top: 15px;
@@ -131,7 +176,7 @@ section.step2-select-package ul {
   padding: 25px;
   margin: 20px;
   border-radius: 2px;
-  border: 2px solid #eee;
+  border: 2px solid #f8f8f8;
   list-style-type: none;
 }
 
@@ -165,18 +210,6 @@ section.step2-select-package.step-active ul .superhero-placeholder {
   color: green;
 }
 
-section.step2-select-package.step-complete ul.package-selected {
-  cursor: pointer;
-  position: relative;
-  border-color: orange;
-  background: #f8f8f8;
-}
-
-section.step2-select-package.step-complete ul.package-selected h3 span,
-section.step2-select-package.step-complete ul.package-selected .superhero-placeholder {
-  color: orange;
-}
-
 section.step2-select-package.step-complete ul.package-selected:before {
   content: "selected";
   position: absolute;
@@ -188,6 +221,31 @@ section.step2-select-package.step-complete ul.package-selected:before {
   color: white;
   font-weight: 500;
   font-size: 12px;
+}
+
+section.step3-review {
+  position: relative;
+  background: #0d0d1f;
+  height: auto;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  section.step3-review {
+    height: 100%;
+  }
+  section.step3-review:before, section.step3-review:after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #0d0d1f;
+  }
+  section.step3-review:after {
+    left: 100%;
+  }
 }
 
 form {
@@ -206,7 +264,7 @@ form input,
 form select {
   padding: 12px;
   border-radius: 5px;
-  border: 1px solid #eee;
+  border: 1px solid #f8f8f8;
 }
 
 form input,
@@ -214,10 +272,31 @@ form label,
 form select,
 form span {
   margin: 5px;
+  color: black;
+}
+
+form label {
+  font-size: 12px;
+  color: white;
 }
 
 form h3 {
   margin: 25px 0 !important;
+}
+
+form input[disabled] {
+  color: white;
+}
+
+form input[type="submit"] {
+  background: orange;
+  border-color: transparent;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Ranchers", sans-serif;
+  letter-spacing: 5px;
 }
 
 form .input-required {
@@ -309,6 +388,18 @@ body header h1 {
 
 body header h1,
 body header p {
+  color: white;
+}
+
+body footer {
+  background: #0d0d1f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+}
+
+body footer a {
   color: white;
 }
 /*# sourceMappingURL=index.css.map */

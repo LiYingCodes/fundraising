@@ -15,7 +15,7 @@ section.step2-select-package {
     padding: 25px;
     margin: 20px;
     border-radius: 2px;
-    border: 2px solid #eee;
+    border: 2px solid $offwhite;
     list-style-type: none;
 
     h3 {
@@ -49,19 +49,16 @@ section.step2-select-package {
         color: green;
       }
     }
+
+    ul:hover {
+      @extend %package-hover;
+    }
   }
 
   //STEP 2 COMPLETED:
   &.step-complete {
     ul.package-selected {
-      cursor: pointer;
-      position: relative;
-      border-color: orange;
-      background: #f8f8f8;
-      h3 span,
-      .superhero-placeholder {
-        color: orange;
-      }
+      @extend %package-hover;
       &:before {
         content: "selected";
         position: absolute;

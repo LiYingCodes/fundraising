@@ -1,9 +1,9 @@
 section.step1-select-hero {
   position: relative;
-  background: #eee;
+  background: $offwhite;
   @media (min-width: 1200px) {
     height: 500px;
-    @include fullBleed(#eee, 500px);
+    @include fullBleed($offwhite, 500px);
   }
 
   .superhero-selected-container {
@@ -11,6 +11,7 @@ section.step1-select-hero {
     .img-container {
       width: 270px;
       margin: 0 auto;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
       &:before {
         content: "🥳";
         position: absolute;
@@ -24,7 +25,7 @@ section.step1-select-hero {
         font-family: "Ranchers", sans-serif;
         font-weight: 700;
         font-size: 25px;
-        color: darkblue;
+        color: $darkblue;
         position: absolute;
         right: -45px;
         top: 15px;
@@ -62,10 +63,6 @@ section.step1-select-hero {
       p {
         width: 50%;
       }
-      // img,
-      // p {
-      //   margin: 25px;
-      // }
     }
   }
 }

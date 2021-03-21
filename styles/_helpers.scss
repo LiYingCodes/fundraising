@@ -8,7 +8,7 @@
     top: 0;
     width: 100%;
     height: $height;
-    background: #eee;
+    background: $color;
   }
   &:after {
     left: 100%;
@@ -28,5 +28,16 @@
   pointer-events: auto;
   h3 + p {
     display: none;
+  }
+}
+
+%package-hover {
+  cursor: pointer;
+  position: relative;
+  border-color: orange;
+  background: $offwhite;
+  h3 span,
+  .superhero-placeholder {
+    color: orange;
   }
 }

@@ -1,5 +1,15 @@
 section.intro {
+  position: relative;
+  background: $darkblue;
+  @media (min-width: 1200px) {
+    height: 400px;
+    @include fullBleed($darkblue, 400px);
+  }
+  color: white;
   p {
     margin: 15px 25px;
+    @media (min-width: 1200px) {
+      margin: 15px 25px 15px 0;
+    }
   }
 }

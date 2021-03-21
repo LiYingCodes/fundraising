@@ -85,7 +85,7 @@ const hash = CryptoJS.MD5(ts + PRIV_KEY + PUBLIC_KEY).toString();
 
 let results;
 async function getData(params, endpoint) {
-  const url = new URL(`http://gateway.marvel.com/v1/public/${endpoint}`);
+  const url = new URL(`https://gateway.marvel.com/v1/public/${endpoint}`);
   url.search = new URLSearchParams(params).toString();
 
   await fetch(url)
