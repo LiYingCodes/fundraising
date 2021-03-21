@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhero Fundraiser</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ranchers&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Superheroes need you!</h1>
+        <p>Help our heroes here:</p>
+      </div>
+    </header>
+    <main>
+      <section class="intro">
+        <h3>Why do we need help?</h3>
+        <p>
+          Governments around the world are starting a petition to outlaw
+          super-powers from being used; if caught using their powers,
+          superheroes could face a life-time prison sentence.
+        </p>
+
+        <p>
+          As we know, superheroes are important to our society! In addition to
+          immense courage and bravery, using their super-powers is a large part
+          of a superhero's work!
+        </p>
+
+        <p>
+          Superheroes around the world want to prepare to counter the petition
+          but this is an expensive activity so we are reaching out to the public
+          to raise funds for this cause.
+        </p>
+
+        <p>
+          Here's how you can help! Select your favorite superhero and package
+          and we will connect you to them!
+        </p>
+      </section>
+      <section class="step1-select-hero">
+        <h3>Step 1: Choose Superhero</h3>
+        <form action="">
+          <select name="" id="featured-superhero-teams">
+            <option value="">Select team</option>
+          </select>
+        </form>
+
+        <div class="superhero-selected-container"></div>
+      </section>
+
+      <section class="step2-select-package">
+        <h3>Step 2: Choose Package</h3>
+        <p>Please complete step 1 above</p>
+        <div>
+          <ul class="package-a">
+            <h3>Package A <span>$1000</span></h3>
+
+            <li>
+              Enjoy 1 day with
+              <span class="superhero-placeholder">superhero</span>
+            </li>
+            <li>10 spots available</li>
+          </ul>
+
+          <ul class="package-b">
+            <h3>Package B <span>$500</span></h3>
+
+            <li>
+              Take home 3 photos with
+              <span class="superhero-placeholder">superhero</span>
+            </li>
+            <li>50 spots available</li>
+          </ul>
+
+          <ul class="package-c">
+            <h3>Package C <span>$250</span></h3>
+
+            <li>
+              30 mins phone or text chat with
+              <span class="superhero-placeholder">superhero</span>
+            </li>
+            <li>100 spots available</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="step3-review">
+        <h3>Step 3: Review Info</h3>
+        <p>Please complete step 1 and 2 above</p>
+        <form>
+          <h3>Package Selected:</h3>
+          <label for="package"> Package Selection: </label>
+          <input
+            type="text"
+            placeholder="Select package from above"
+            name="package"
+            readonly
+            disabled
+          />
+          <h3>Contact Information</h3>
+          <label for="email"> Email: </label>
+          <span class="input-required">This field is required!</span>
+          <input
+            type="email"
+            placeholder="hello@youremail.com"
+            name="email"
+            required
+          />
+          <label for="firstname"> First name: </label>
+          <span class="input-required">This field is required!</span>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="firstname"
+            required
+          />
+          <label for="lastname"> Last name: </label>
+          <span class="input-required">This field is required!</span>
+          <input type="text" placeholder="Last Name" name="lastname" required />
+
+          <h3>Billing Information</h3>
+
+          <label for="address-1">Address Line 1:</label>
+          <span class="input-required">This field is required!</span>
+          <input
+            type="text"
+            name="address-1"
+            placeholder="Address Line 1"
+            required
+          />
+          <label for="address-2">Address Line 2:</label>
+          <input type="text" name="address-2" placeholder="Address Line 2" />
+          <label for="city">City:</label>
+          <span class="input-required">This field is required!</span>
+          <input type="text" name="city" placeholder="City" required />
+
+          <label for="postal code">Postal Code:</label>
+          <span class="input-required">This field is required!</span>
+          <input
+            type="text"
+            name="postal code"
+            placeholder="Postal Code"
+            required
+          />
+          <label for="country"> Country: </label>
+          <span class="input-required">This field is required!</span>
+          <select id="countries" required>
+            <option value="">Select Country</option>
+          </select>
+          <input type="submit" />
+        </form>
+      </section>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"
+      integrity="sha512-nOQuvD9nKirvxDdvQ9OMqe2dgapbPB7vYAMrzJihw5m+aNcf0dX53m6YxM4LgA9u8e9eg9QX+/+mPu8kCNpV2A=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

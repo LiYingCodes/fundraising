@@ -1,0 +1,50 @@
+section.step3-review {
+  @extend %disabled;
+  &.step-active {
+    @extend %active;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 75%;
+  input,
+  select {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+  }
+
+  input,
+  label,
+  select,
+  span {
+    margin: 5px;
+  }
+
+  h3 {
+    margin: 25px 0 !important;
+  }
+
+  .input-required {
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+    display: none;
+  }
+
+  &.submit-clicked {
+    input,
+    label,
+    select {
+      &[required] {
+        border: 1px solid red;
+      }
+    }
+
+    label + .input-required {
+      display: block;
+    }
+  }
+}

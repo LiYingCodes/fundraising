@@ -1,0 +1,71 @@
+section.step1-select-hero {
+  position: relative;
+  background: #eee;
+  @media (min-width: 1200px) {
+    height: 500px;
+    @include fullBleed(#eee, 500px);
+  }
+
+  .superhero-selected-container {
+    margin: 0 auto;
+    .img-container {
+      width: 270px;
+      margin: 0 auto;
+      &:before {
+        content: "🥳";
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        font-size: 50px;
+      }
+
+      &:after {
+        content: "⬅ YOU";
+        font-family: "Ranchers", sans-serif;
+        font-weight: 700;
+        font-size: 25px;
+        color: darkblue;
+        position: absolute;
+        right: -45px;
+        top: 15px;
+        transform: rotate(-30deg);
+      }
+      background: white;
+      padding: 10px 10px 50px 10px;
+      margin-top: 25px;
+      position: relative;
+      &-text {
+        font-family: $ranchers;
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        font-size: 20px;
+      }
+    }
+
+    img {
+      width: 250px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    p {
+      padding: 25px;
+      align-self: center;
+    }
+
+    @media (min-width: 600px) {
+      display: flex;
+      justify-content: space-around;
+      max-width: 75%;
+
+      p {
+        width: 50%;
+      }
+      // img,
+      // p {
+      //   margin: 25px;
+      // }
+    }
+  }
+}

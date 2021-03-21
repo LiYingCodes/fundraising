@@ -1,0 +1,314 @@
+@charset "UTF-8";
+section.step2-select-package, section.step3-review {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+section.step2-select-package h3 + p, section.step3-review h3 + p {
+  color: red;
+}
+
+section.step2-select-package.step-active, section.step3-review.step-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+section.step2-select-package.step-active h3 + p, section.step3-review.step-active h3 + p {
+  display: none;
+}
+
+section.intro p {
+  margin: 15px 25px;
+}
+
+section.step1-select-hero {
+  position: relative;
+  background: #eee;
+}
+
+@media (min-width: 1200px) {
+  section.step1-select-hero {
+    height: 500px;
+  }
+  section.step1-select-hero:before, section.step1-select-hero:after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 500px;
+    background: #eee;
+  }
+  section.step1-select-hero:after {
+    left: 100%;
+  }
+}
+
+section.step1-select-hero .superhero-selected-container {
+  margin: 0 auto;
+}
+
+section.step1-select-hero .superhero-selected-container .img-container {
+  width: 270px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px 10px 50px 10px;
+  margin-top: 25px;
+  position: relative;
+}
+
+section.step1-select-hero .superhero-selected-container .img-container:before {
+  content: "🥳";
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 50px;
+}
+
+section.step1-select-hero .superhero-selected-container .img-container:after {
+  content: "⬅ YOU";
+  font-family: "Ranchers", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: darkblue;
+  position: absolute;
+  right: -45px;
+  top: 15px;
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+section.step1-select-hero .superhero-selected-container .img-container-text {
+  font-family: "Ranchers", sans-serif;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-size: 20px;
+}
+
+section.step1-select-hero .superhero-selected-container img {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+section.step1-select-hero .superhero-selected-container p {
+  padding: 25px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 600px) {
+  section.step1-select-hero .superhero-selected-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 75%;
+  }
+  section.step1-select-hero .superhero-selected-container p {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.step2-select-package {
+    height: 300px;
+  }
+  section.step2-select-package div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  section.step2-select-package div ul {
+    width: calc(100% / 3);
+  }
+}
+
+section.step2-select-package ul {
+  padding: 25px;
+  margin: 20px;
+  border-radius: 2px;
+  border: 2px solid #eee;
+  list-style-type: none;
+}
+
+section.step2-select-package ul h3 {
+  position: relative;
+  margin-left: 0;
+}
+
+section.step2-select-package ul h3 span {
+  list-style-type: none;
+  font-size: 30px;
+  position: absolute;
+  right: 0px;
+  bottom: 2px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.step2-select-package ul h3 span,
+section.step2-select-package ul .superhero-placeholder {
+  font-weight: 700;
+}
+
+section.step2-select-package.step-active ul {
+  cursor: pointer;
+  border-color: green;
+}
+
+section.step2-select-package.step-active ul h3 span,
+section.step2-select-package.step-active ul .superhero-placeholder {
+  color: green;
+}
+
+section.step2-select-package.step-complete ul.package-selected {
+  cursor: pointer;
+  position: relative;
+  border-color: orange;
+  background: #f8f8f8;
+}
+
+section.step2-select-package.step-complete ul.package-selected h3 span,
+section.step2-select-package.step-complete ul.package-selected .superhero-placeholder {
+  color: orange;
+}
+
+section.step2-select-package.step-complete ul.package-selected:before {
+  content: "selected";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  background: orange;
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 75%;
+}
+
+form input,
+form select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+form input,
+form label,
+form select,
+form span {
+  margin: 5px;
+}
+
+form h3 {
+  margin: 25px 0 !important;
+}
+
+form .input-required {
+  color: red;
+  font-size: 10px;
+  font-style: italic;
+  display: none;
+}
+
+form.submit-clicked input[required],
+form.submit-clicked label[required],
+form.submit-clicked select[required] {
+  border: 1px solid red;
+}
+
+form.submit-clicked label + .input-required {
+  display: block;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+body h1,
+body h2,
+body h3,
+body header p {
+  font-family: "Ranchers", sans-serif;
+  letter-spacing: 2px;
+}
+
+body h3,
+body h3 + p {
+  margin-left: 25px;
+}
+
+@media (min-width: 1200px) {
+  body h3,
+  body h3 + p {
+    margin: 0;
+  }
+}
+
+body section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+body header {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
+  height: 400px;
+}
+
+body header div {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body header h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 450px) {
+  body header h1 {
+    font-size: 45px;
+  }
+}
+
+body header h1,
+body header p {
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */

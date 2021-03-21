@@ -1,0 +1,32 @@
+@mixin fullBleed($color, $height) {
+  // overflow: hidden;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: $height;
+    background: #eee;
+  }
+  &:after {
+    left: 100%;
+  }
+}
+
+%disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  h3 + p {
+    color: red;
+  }
+}
+
+%active {
+  opacity: 1;
+  pointer-events: auto;
+  h3 + p {
+    display: none;
+  }
+}
