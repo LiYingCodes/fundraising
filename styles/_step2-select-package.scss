@@ -43,7 +43,7 @@ section.step2-select-package {
     @extend %active;
     ul {
       cursor: pointer;
-      border-color: green;
+      border-color: $green;
       h3 span,
       .superhero-placeholder {
         color: $green;
