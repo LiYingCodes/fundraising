@@ -57,13 +57,15 @@ function markComplete(thisSection){
 function handleForm() {
   const form = document.querySelector('.step3-review form')
   const submitBtn = document.querySelector('.step3-review input[type=submit]');
-  console.log(submitBtn);
+
   submitBtn.addEventListener('click', function() {
-    //check if button 
+    //check if button was clicked
     form.classList.add('submit-clicked');
   })
+
   form.addEventListener('submit', function() {
-    alert('Thanks for your help!')
+    //check if form submitted
+    alert('Thanks for your help!');
   })
 }
 

@@ -2,10 +2,10 @@ section.intro {
   position: relative;
   background: $darkblue;
   @media (min-width: 1200px) {
-    height: 400px;
-    @include fullBleed($darkblue, 400px);
+    height: 100%;
+    @include fullBleed($darkblue, 100%);
   }
-  color: white;
+  color: $white;
   p {
     margin: 15px 25px;
     @media (min-width: 1200px) {

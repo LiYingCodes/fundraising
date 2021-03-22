@@ -6,7 +6,7 @@ section.step3-review {
     height: 100%;
     @include fullBleed($darkblue, 100%);
   }
-  color: white;
+  color: $white;
   @extend %disabled;
   &.step-active {
     @extend %active;
@@ -34,7 +34,7 @@ form {
 
   label {
     font-size: 12px;
-    color: white;
+    color: $white;
   }
 
   h3 {
@@ -42,12 +42,12 @@ form {
   }
 
   input[disabled] {
-    color: white;
+    color: $white;
   }
   input[type="submit"] {
-    background: orange;
+    background: $orange;
     border-color: transparent;
-    color: white;
+    color: $white;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 16px;

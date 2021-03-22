@@ -30,6 +30,36 @@ section.step2-select-package.step-complete ul.package-selected .superhero-placeh
   color: orange;
 }
 
+header {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
+  height: 400px;
+}
+
+header div {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 450px) {
+  header h1 {
+    font-size: 45px;
+  }
+}
+
+header h1,
+header p {
+  color: white;
+}
+
 section.intro {
   position: relative;
   background: #0d0d1f;
@@ -38,7 +68,7 @@ section.intro {
 
 @media (min-width: 1200px) {
   section.intro {
-    height: 400px;
+    height: 100%;
   }
   section.intro:before, section.intro:after {
     content: "";
@@ -46,7 +76,7 @@ section.intro {
     left: -100%;
     top: 0;
     width: 100%;
-    height: 400px;
+    height: 100%;
     background: #0d0d1f;
   }
   section.intro:after {
@@ -316,6 +346,18 @@ form.submit-clicked label + .input-required {
   display: block;
 }
 
+footer {
+  background: #0d0d1f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+}
+
+footer a {
+  color: white;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -359,47 +401,5 @@ body section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 0;
-}
-
-body header {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
-  height: 400px;
-}
-
-body header div {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-body header h1 {
-  font-size: 60px;
-  text-transform: uppercase;
-}
-
-@media (max-width: 450px) {
-  body header h1 {
-    font-size: 45px;
-  }
-}
-
-body header h1,
-body header p {
-  color: white;
-}
-
-body footer {
-  background: #0d0d1f;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-size: 12px;
-}
-
-body footer a {
-  color: white;
 }
 /*# sourceMappingURL=index.css.map */

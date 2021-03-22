@@ -46,7 +46,7 @@ section.step2-select-package {
       border-color: green;
       h3 span,
       .superhero-placeholder {
-        color: green;
+        color: $green;
       }
     }
 
@@ -66,8 +66,8 @@ section.step2-select-package {
         bottom: 0;
         padding: 10px 5px;
         text-transform: uppercase;
-        background: orange;
-        color: white;
+        background: $orange;
+        color: $white;
         font-weight: 500;
         font-size: 12px;
       }

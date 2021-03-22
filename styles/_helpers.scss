@@ -34,10 +34,10 @@
 %package-hover {
   cursor: pointer;
   position: relative;
-  border-color: orange;
+  border-color: $orange;
   background: $offwhite;
   h3 span,
   .superhero-placeholder {
-    color: orange;
+    color: $orange;
   }
 }

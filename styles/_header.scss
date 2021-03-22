@@ -1,0 +1,24 @@
+header {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://raw.githubusercontent.com/LiYingCodes/devAvengers/master/assets/8ae9728be2d1632fc6d92413738398da.gif");
+  height: 400px;
+  div {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    @media (max-width: 450px) {
+      font-size: 45px;
+    }
+  }
+
+  h1,
+  p {
+    color: $white;
+  }
+}
